@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title id="pageTitle">New Tab</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-profile" id="sidebarProfileAvatar">AD</div>
+        <div class="sidebar-middle">
+          <button
+            class="side-button active"
+            id="homeButton"
+            type="button"
+            title="Home"
+            aria-label="Home"
+          >
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3.5 10.7L12 3.8L20.5 10.7V20.2H14.8V14.2H9.2V20.2H3.5V10.7Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="side-button"
+            id="focusButton"
+            type="button"
+            title="Focus"
+            aria-label="Focus"
+          >
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="7.4"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+              <circle cx="12" cy="12" r="2.2" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+        <button
+          class="settings-button"
+          id="settingsButton"
+          type="button"
+          title="Settings"
+          aria-label="Settings"
+        >
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M19.43 12.98C19.47 12.66 19.5 12.33 19.5 12C19.5 11.67 19.47 11.34 19.43 11.02L21.54 9.37C21.73 9.22 21.78 8.95 21.66 8.74L19.66 5.28C19.54 5.07 19.27 4.98 19.05 5.07L16.56 6.07C16.05 5.67 15.48 5.34 14.87 5.09L14.49 2.44C14.46 2.19 14.25 2 14 2H10C9.75 2 9.54 2.19 9.51 2.44L9.13 5.09C8.52 5.34 7.95 5.67 7.44 6.07L4.95 5.07C4.73 4.98 4.46 5.07 4.34 5.28L2.34 8.74C2.22 8.95 2.27 9.22 2.46 9.37L4.57 11.02C4.53 11.34 4.5 11.67 4.57 12.98L2.46 14.63C2.27 14.78 2.22 15.05 2.34 15.26L4.34 18.72C4.46 19.02 4.73 19.02 4.95 18.93L7.44 17.93C7.95 18.33 8.52 18.66 9.13 18.91L9.51 21.56C9.54 21.81 9.75 22 10 22H14C14.25 22 14.46 21.81 14.49 21.56L14.87 18.91C15.48 18.66 16.05 18.33 16.56 17.93L19.05 18.93C19.27 19.02 19.54 18.93 19.66 18.72L21.66 15.26C21.78 15.05 21.73 14.78 21.54 14.63L19.43 12.98Z"
+              stroke="currentColor"
+              stroke-width="1.55"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="3.2"
+              stroke="currentColor"
+              stroke-width="1.7"
+            />
+          </svg>
+        </button>
+      </aside>
+      <main class="main">
+        <div class="topbar">
+          <button
+            class="theme-toggle"
+            id="mainThemeToggle"
+            type="button"
+            title="Toggle theme"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-toggle-track"
+              ><span class="theme-toggle-thumb">
+                <svg
+                  class="theme-sun"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M12 2V5M12 19V22M4.93 4.93L7.05 7.05M16.95 16.95L19.07 19.07M2 12H5M19 12H22M4.93 19.07L7.05 16.95M16.95 7.05L19.07 4.93"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <svg
+                  class="theme-moon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.4 14.1A8.5 8.5 0 0 1 9.9 3.6A8.5 8.5 0 1 0 20.4 14.1Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg> </span
+            ></span>
+          </button>
+          <div class="profile-avatar" id="topProfileAvatar">AD</div>
+        </div>
+        <div class="content">
+          <section class="hero">
+            <div class="time" id="clock">12:00</div>
+            <div class="greeting" id="greeting">Good afternoon</div>
+            <div class="quote" id="quote">
+              It always seems impossible until it's done.
+            </div>
+            <div class="quote-author" id="quoteAuthor">— Nelson Mandela</div>
+            <div class="search-wrap">
+              <form class="search" id="searchForm">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none">
+                  <circle
+                    cx="10.8"
+                    cy="10.8"
+                    r="6.8"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+                  <path
+                    d="M16 16L21 21"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <input
+                  id="searchInput"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Search the web"
+                  aria-label="Search the web"
+                />
+                <button class="search-submit" type="submit" aria-label="Search">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M5 12H19"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M13 6L19 12L13 18"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </section>
+          <section class="section">
+            <div class="section-heading">
+              <h2 class="section-title">AI tools</h2>
+              <span class="section-label">Open directly</span>
+            </div>
+            <div class="ai-grid">
+              <a
+                class="ai-card"
+                href="https://chatgpt.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><div class="ai-logo openai">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg"
+                    alt="ChatGPT"
+                  />
+                </div>
+                <div>
+                  <div class="ai-name">ChatGPT</div>
+                  <div class="ai-description">General intelligence</div>
+                </div></a
+              >
+              <a
+                class="ai-card"
+                href="https://gemini.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><div class="ai-logo gemini">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Google_Gemini_icon_2025.svg"
+                    alt="Gemini"
+                  />
+                </div>
+                <div>
+                  <div class="ai-name">Gemini</div>
+                  <div class="ai-description">Google AI assistant</div>
+                </div></a
+              >
+              <a
+                class="ai-card"
+                href="https://claude.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><div class="ai-logo claude">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/claude/default.svg"
+                    alt="Claude"
+                  />
+                </div>
+                <div>
+                  <div class="ai-name">Claude</div>
+                  <div class="ai-description">Reasoning & writing</div>
+                </div></a
+              >
+              <a
+                class="ai-card"
+                href="https://www.perplexity.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><div class="ai-logo perplexity">
+                  <img
+                    src="https://asvg.app/assets/svg/perplexity/perplexity-logomark-color.svg"
+                    alt="Perplexity"
+                  />
+                </div>
+                <div>
+                  <div class="ai-name">Perplexity</div>
+                  <div class="ai-description">AI search</div>
+                </div></a
+              >
+              <a
+                class="ai-card"
+                href="https://copilot.microsoft.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><div class="ai-logo copilot">
+                  <img
+                    src="https://ai.sitebard.com/icons/svg/copilot-color.svg"
+                    alt="Microsoft Copilot"
+                  />
+                </div>
+                <div>
+                  <div class="ai-name">Copilot</div>
+                  <div class="ai-description">Microsoft AI</div>
+                </div></a
+              >
+              <a
+                class="ai-card"
+                href="https://grok.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><div class="ai-logo grok">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/grok-xai/default.svg"
+                    alt="Grok"
+                  />
+                </div>
+                <div>
+                  <div class="ai-name">Grok</div>
+                  <div class="ai-description">xAI assistant</div>
+                </div></a
+              >
+            </div>
+          </section>
+          <section class="section">
+            <div class="lower-grid">
+              <div class="panel">
+                <h3 class="panel-title">Recent searches</h3>
+                <div class="panel-subtitle">
+                  Your actual searches appear here
+                </div>
+                <div class="recent-list" id="recentList">
+                  <div class="empty-state">No searches yet.</div>
+                </div>
+              </div>
+              <div class="panel">
+                <h3 class="panel-title">Weather</h3>
+                <div class="panel-subtitle">Current conditions</div>
+                <div class="weather-content" id="weatherContent">
+                  <div class="weather-status">
+                    Add your Google Weather API key to enable live weather.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="focus-home" id="focusHome" aria-live="polite">
+            <div class="focus-home-card">
+              <div class="focus-home-main">
+                <div class="focus-home-icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="8.2"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="M12 7.5V12L15 14"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="focus-home-details">
+                  <div class="focus-home-kicker">Focus session</div>
+                  <div class="focus-home-task" id="focusHomeTask">Focus</div>
+                  <div class="focus-home-status" id="focusHomeStatus">
+                    In progress
+                  </div>
+                </div>
+              </div>
+              <div class="focus-home-right">
+                <div class="focus-home-time" id="focusHomeTime">25:00</div>
+                <button
+                  class="focus-home-open"
+                  id="focusHomeOpen"
+                  type="button"
+                >
+                  Open
+                </button>
+              </div>
+            </div>
+            <div class="focus-progress">
+              <span id="focusProgressBar"></span>
+            </div>
+          </section>
+          <section class="media">
+            <div class="media-card" id="mediaCard">
+              <div class="media-art">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18V5L20 3V16"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="6.5"
+                    cy="18.5"
+                    r="3.5"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+                  <circle
+                    cx="17.5"
+                    cy="16.5"
+                    r="3.5"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+                </svg>
+              </div>
+              <div class="media-details">
+                <div class="media-title" id="mediaTitle">Nothing playing</div>
+                <div class="media-artist" id="mediaArtist">
+                  Live browser media will appear here
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="focus-overlay" id="focusOverlay">
+      <div
+        class="focus-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="focusTitle"
+      >
+        <div class="focus-header">
+          <div>
+            <h2 class="focus-title" id="focusTitle">Focus</h2>
+            <p class="focus-subtitle">
+              Set a session and work without distractions.
+            </p>
+          </div>
+          <button
+            class="close-button"
+            id="closeFocus"
+            type="button"
+            aria-label="Close focus"
+          >
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6 6L18 18"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+              <path
+                d="M18 6L6 18"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <input
+          class="focus-task"
+          id="focusTask"
+          type="text"
+          maxlength="100"
+          placeholder="What are you focusing on?"
+          autocomplete="off"
+        />
+        <div class="focus-timer" id="focusTimer">25:00</div>
+        <div class="focus-presets">
+          <button class="focus-preset active" data-minutes="25" type="button">
+            25 min</button
+          ><button class="focus-preset" data-minutes="50" type="button">
+            50 min</button
+          ><button class="focus-preset" data-minutes="90" type="button">
+            90 min
+          </button>
+        </div>
+        <div class="focus-actions">
+          <button class="focus-start" id="focusStart" type="button">
+            Start focus</button
+          ><button class="focus-reset" id="focusReset" type="button">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="settingsOverlay">
+      <div class="settings-panel">
+        <div class="settings-header">
+          <h2 class="settings-title">Settings</h2>
+          <button
+            class="close-button"
+            id="closeSettings"
+            type="button"
+            aria-label="Close settings"
+          >
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6 6L18 18"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+              <path
+                d="M18 6L6 18"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="settings-section">
+          <h3>Profile</h3>
+          <div class="profile-settings">
+            <div class="profile-preview" id="profilePreview">AD</div>
+            <div>
+              <div class="profile-actions">
+                <label class="profile-upload-button"
+                  >Upload photo<input
+                    class="profile-upload-input"
+                    id="profileInput"
+                    type="file"
+                    accept="image/*" /></label
+                ><button
+                  class="profile-remove-button"
+                  id="removeProfile"
+                  type="button"
+                >
+                  Remove
+                </button>
+              </div>
+              <div class="profile-upload-info">
+                JPG, PNG or WebP · Your photo stays on this device
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-section">
+          <h3>Appearance</h3>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Theme</div>
+              <div class="setting-description">
+                Choose the interface appearance.
+              </div>
+            </div>
+            <select id="themeSetting">
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+        </div>
+        <div class="settings-section">
+          <h3>Clock</h3>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Clock size</div>
+              <div class="setting-description">Adjust the clock scale.</div>
+            </div>
+            <select id="clockSizeSetting">
+              <option value="small">Small</option>
+              <option value="normal">Normal</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Clock weight</div>
+              <div class="setting-description">Change the clock emphasis.</div>
+            </div>
+            <select id="clockWeightSetting">
+              <option value="normal">Normal</option>
+              <option value="bold">Bold</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Clock style</div>
+              <div class="setting-description">Normal or italic.</div>
+            </div>
+            <select id="clockStyleSetting">
+              <option value="normal">Normal</option>
+              <option value="italic">Italic</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Time format</div>
+              <div class="setting-description">Choose 12 or 24 hour time.</div>
+            </div>
+            <select id="timeFormatSetting">
+              <option value="12">12 hour</option>
+              <option value="24">24 hour</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-label">Show seconds</div>
+              <div class="setting-description">
+                Display seconds beside the time.
+              </div>
+            </div>
+            <label class="toggle"
+              ><input id="secondsSetting" type="checkbox" /><span
+                class="toggle-track"
+              ></span
+            ></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="onboarding" id="onboarding">
+      <div class="onboarding-card">
+        <div class="onboarding-step active" id="nameStep">
+          <div class="onboarding-kicker">Welcome</div>
+          <h1 class="onboarding-title">What should we<br />call you?</h1>
+          <p class="onboarding-description">
+            Your name will be used to personalize your new tab experience.
+          </p>
+          <input
+            class="name-input"
+            id="nameInput"
+            type="text"
+            autocomplete="name"
+            placeholder="Your name"
+          /><button class="onboarding-button" id="nameContinue" type="button">
+            Continue
+          </button>
+        </div>
+        <div class="onboarding-step" id="photoStep">
+          <div class="onboarding-kicker">Almost there</div>
+          <h1 class="onboarding-title">Add a profile<br />picture</h1>
+          <p class="onboarding-description">
+            Use a photo or skip this step. We'll create a simple initials avatar
+            if you skip it.
+          </p>
+          <label class="upload-box"
+            ><div class="upload-icon" id="uploadIcon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 16V4"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M7.5 8.5L12 4L16.5 8.5"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 14V19C5 20.1 5.9 21 7 21H17C18.1 21 19 20.1 19 19V14"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <img
+              id="uploadPreview"
+              alt="Profile preview"
+              style="display: none" /><input
+              class="profile-upload-input"
+              id="onboardingProfileInput"
+              type="file"
+              accept="image/*" /></label
+          ><button
+            class="onboarding-button"
+            id="finishOnboarding"
+            type="button"
+          >
+            Finish setup</button
+          ><button class="skip-button" id="skipPhoto" type="button">
+            Skip for now
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="personalizing" id="personalizing">
+      <div>
+        <div class="personalizing-title">Personalizing it for you…</div>
+        <div class="personalizing-subtitle">Just a moment.</div>
+        <div class="loader"></div>
+      </div>
+    </div>
+<script src="./script.js"></script>
+  </body>
+</html>
